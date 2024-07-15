@@ -1063,6 +1063,7 @@ struct DepotWindow : Window {
 							this->vehicle_over = INVALID_VEHICLE;
 							TrainDepotMoveVehicle(gdvp.wagon, sel, gdvp.head);
 						} else if (gdvp.head != nullptr && gdvp.head->IsFrontEngine()) {
+								} else if (gdvp.head != NULL && gdvp.head->IsPrimaryVehicle()) {
 							ShowVehicleViewWindow(gdvp.head);
 						}
 					}
