@@ -79,6 +79,7 @@ static const CargoID NUM_CARGO = 64; ///< Maximum number of cargo types in a gam
 /* CARGO_AUTO_REFIT and CARGO_NO_REFIT are stored in save-games for refit-orders, so should not be changed. */
 static const CargoID CARGO_AUTO_REFIT = 0xFD; ///< Automatically choose cargo type when doing auto refitting.
 static const CargoID CARGO_NO_REFIT = 0xFE; ///< Do not refit cargo of a vehicle (used in vehicle orders and auto-replace/auto-renew).
+static const CT_COUPLE_ANY_CARGO = 0xFE, ///< Couple train with any cargotypes (used in GOTO_COUPLE order to specify train to couple)
 
 static const CargoID INVALID_CARGO = UINT8_MAX;
 
