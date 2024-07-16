@@ -333,6 +333,11 @@ struct GroundVehicle : public SpecializedVehicle<T, Type> {
 	inline void ClearFreeWagon() { ClrBit(this->subtype, GVSF_FREE_WAGON); }
 
 	/**
+	 * Check if the vehicle is a first wagon (got no engine in front of it).
+	 * @return Returns true if the vehicle is a first wagon.
+	 */
+	inline bool IsFrontWagon() const { return HasBit(this->subtype, GVSF_FRONT_WAGON); }
+	/**
 	 * Set a vehicle as a virtual vehicle.
 	 */
 	inline void SetVirtual() { SetBit(this->subtype, GVSF_VIRTUAL); }
