@@ -284,6 +284,15 @@ struct GroundVehicle : public SpecializedVehicle<T, Type> {
 	inline void ClearFrontEngine() { ClrBit(this->subtype, GVSF_FRONT); }
 
 	/**
+	 * Set front wagon state.
+	 */
+	inline void SetFrontWagon() { SetBit(this->subtype, GVSF_FRONT_WAGON); }
+
+	/**
+	 * Remove the front wagon state.
+	 */
+	inline void ClearFrontWagon() { ClrBit(this->subtype, GVSF_FRONT_WAGON); }	
+	/**
 	 * Set a vehicle to be an articulated part.
 	 */
 	inline void SetArticulatedPart() { SetBit(this->subtype, GVSF_ARTICULATED_PART); }
